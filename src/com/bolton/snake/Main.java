@@ -26,6 +26,9 @@ public class Main extends JFrame {
 		initComponents();
 		initGame();
 		initFrame();
+
+		snake.changeDirection(direction);
+		newGame();
 	}
 
 	private void initComponents() {
@@ -48,7 +51,7 @@ public class Main extends JFrame {
 
 	private void initFrame() {
 		pack();
-		setTitle("Snake");
+		setTitle("Snake Game OOM");
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
@@ -58,6 +61,16 @@ public class Main extends JFrame {
 	public void newGame() {
 		started = true;
 		thread.start();
+	}
+
+	public void pauseGame(){
+		started = false;
+		thread.suspend();
+	}
+
+	public void restartPausedGame() {
+		started = true;
+		thread.resume();
 	}
 
 	public void gameOver() {
@@ -76,13 +89,17 @@ public class Main extends JFrame {
 			Runnable r = new GamePanel(gameField, snake, this);
 			thread = null;
 			thread = new Thread(r);
+
+			snake.changeDirection(direction);
+			newGame();
+
 			break;
 
 		case JOptionPane.CANCEL_OPTION:
 			System.exit(0);
 			break;
 		default:
-			JOptionPane.showMessageDialog(getParent(), "Something went wrong :( /n Please relunch app");
+			JOptionPane.showMessageDialog(getParent(), "Something went wrong :( /n Please relaunch app");
 			break;
 		}
 	}
@@ -148,6 +165,15 @@ public class Main extends JFrame {
 				if (snake != null) {
 					snake.changeDirection(Route.RIGHT);
 					direction = Route.RIGHT;
+				}
+			}
+
+			if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+				System.out.println(started);
+				if (started) {
+					pauseGame();
+				} else {
+					restartPausedGame();
 				}
 			}
 		}

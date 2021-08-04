@@ -6,7 +6,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class ScoreBoard extends JPanel {
 
@@ -15,15 +15,15 @@ public class ScoreBoard extends JPanel {
 	public static final int PANEL_HEIGHT = 50;
 
 	private final Font FONT;
-	private final String SCORE_LABEL = "SCORE:";
+	private final String SCORE_LABEL = "RESULT:";
 	private String score;
 
 	public ScoreBoard() {
 		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
-		setBackground(Color.DARK_GRAY);
+		setBackground(Color.yellow);
 
 		score = "0";
-		FONT = new Font("SansSerif", Font.BOLD, 20);
+		FONT = new Font("cursive", Font.BOLD, 20);
 	}
 
 	public void addPoints(int points) {
@@ -43,10 +43,10 @@ public class ScoreBoard extends JPanel {
 		Graphics2D g2 = (Graphics2D) g;
 
 		g2.setFont(FONT);
-		g2.setPaint(new Color(255, 255, 215)); // white
+		g2.setPaint(new Color(0, 0, 0)); // white
 		g2.drawString(SCORE_LABEL, 15, 32);
-		g2.setPaint(new Color(215, 34, 38)); // RED
-		g2.drawString(score, 105, 32);
+		g2.setPaint(new Color(0, 0, 0)); // orange
+		g2.drawString(score, 140, 32);
 	}
 
 }

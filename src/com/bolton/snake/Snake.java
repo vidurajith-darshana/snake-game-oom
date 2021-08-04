@@ -1,7 +1,5 @@
 package com.bolton.snake;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +7,7 @@ import java.util.List;
 
 
 /**
- * @author hasantha.uk
+ * @author vidurajith.SAS9OCD
  *
  */
 public class Snake {

@@ -2,7 +2,7 @@ package com.bolton.snake;
 
 public class GamePanel implements Runnable {
 
-	public static final int DELAY = 400;
+	public static final int DELAY = 200;
 
 	private Main main;
 	private GaminField gameField;

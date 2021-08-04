@@ -23,7 +23,7 @@ public class GaminField extends JPanel {
 
 	public GaminField() {
 		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
-		setBackground(Color.BLACK);
+		setBackground(Color.GRAY);
 		initDefaults();
 	}
 
@@ -56,7 +56,7 @@ public class GaminField extends JPanel {
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 		// Draw the foods
-		g2.setPaint(Color.WHITE);
+		g2.setPaint(Color.RED);
 		g2.fillOval((int) foods.getShape().getMinX() + 5, (int) foods.getShape().getMinY() + 5, 10, 10);
 
 		// Draw the snake parts
@@ -66,7 +66,7 @@ public class GaminField extends JPanel {
 		}
 
 		// Draw the head of the snake
-		g2.setPaint(new Color(215, 34, 38)); // RED
+		g2.setPaint(new Color(0, 255, 0)); // RED
 		g2.fill(snakeParts.get(0));
 	}
 }

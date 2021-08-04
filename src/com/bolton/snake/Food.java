@@ -3,7 +3,7 @@ package com.bolton.snake;
 import java.awt.geom.Ellipse2D;
 
 /**
- * @author hasantha.uk
+ * @author vidurajith.SAS9OCD
  *
  */
 public class Food {
