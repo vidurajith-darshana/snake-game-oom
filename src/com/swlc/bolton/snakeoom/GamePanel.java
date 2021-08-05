@@ -1,4 +1,4 @@
-package com.bolton.snake;
+package com.swlc.bolton.snakeoom;
 
 public class GamePanel implements Runnable {
 

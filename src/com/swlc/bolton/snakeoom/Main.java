@@ -1,4 +1,4 @@
-package com.bolton.snake;
+package com.swlc.bolton.snakeoom;
 
 import java.awt.EventQueue;
 import java.awt.GridBagLayout;

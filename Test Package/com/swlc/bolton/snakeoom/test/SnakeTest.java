@@ -1,4 +1,4 @@
-package com.bolton.snake.test;
+package com.swlc.bolton.snakeoom.test;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,11 +8,11 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.bolton.snake.Food;
-import com.bolton.snake.GaminField;
-import com.bolton.snake.Route;
-import com.bolton.snake.ScoreBoard;
-import com.bolton.snake.Snake;
+import com.swlc.bolton.snakeoom.Food;
+import com.swlc.bolton.snakeoom.GaminField;
+import com.swlc.bolton.snakeoom.Route;
+import com.swlc.bolton.snakeoom.ScoreBoard;
+import com.swlc.bolton.snakeoom.Snake;
 
 class SnakeTest {
 
