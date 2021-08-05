@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 public class GaminField extends JPanel {
 
 	private static final long serialVersionUID = 1L;
-	public static final int PANEL_WIDTH = 400;
+	public static final int PANEL_WIDTH = 700;
 	public static final int PANEL_HEIGHT = 400;
 
 	private List<Ellipse2D.Double> snakeParts;
@@ -57,7 +57,7 @@ public class GaminField extends JPanel {
 
 		// Draw the foods
 		g2.setPaint(Color.RED);
-		g2.fillOval((int) foods.getShape().getMinX() + 5, (int) foods.getShape().getMinY() + 5, 10, 10);
+		g2.fillRect((int) foods.getShape().getMinX() + 5, (int) foods.getShape().getMinY() + 5, 15, 15);
 
 		// Draw the snake parts
 		g2.setPaint(new Color(255, 255, 255)); // white

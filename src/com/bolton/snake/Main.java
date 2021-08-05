@@ -169,7 +169,6 @@ public class Main extends JFrame {
 			}
 
 			if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-				System.out.println(started);
 				if (started) {
 					pauseGame();
 				} else {
