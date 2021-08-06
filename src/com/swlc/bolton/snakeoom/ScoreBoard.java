@@ -10,8 +10,7 @@ import javax.swing.*;
 
 public class ScoreBoard extends JPanel {
 
-	private static final long serialVersionUID = 1L;
-	public static final int PANEL_WIDTH = 200;
+	public static final int PANEL_WIDTH = 400;
 	public static final int PANEL_HEIGHT = 50;
 
 	private final Font FONT;
@@ -47,6 +46,11 @@ public class ScoreBoard extends JPanel {
 		g2.drawString(SCORE_LABEL, 15, 32);
 		g2.setPaint(new Color(0, 0, 0)); // orange
 		g2.drawString(score, 140, 32);
+
+		g2.setFont(new Font("cursive", Font.PLAIN, 10));
+		g2.setPaint(new Color(0, 0, 0)); // orange
+		g2.drawString("press space to pause the game", 180, 20);
+		g2.drawString("press arrow keys to control the game", 180, 35);
 	}
 
 }
