@@ -49,7 +49,7 @@ public class ScoreBoard extends JPanel {
 
 		g2.setFont(new Font("cursive", Font.PLAIN, 10));
 		g2.setPaint(new Color(0, 0, 0)); // orange
-		g2.drawString("press space to pause the game", 180, 20);
+		g2.drawString("press space to pause/resume the game", 180, 20);
 		g2.drawString("press arrow keys to control the game", 180, 35);
 	}
 
