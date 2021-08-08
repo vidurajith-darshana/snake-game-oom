@@ -10,7 +10,6 @@ import javax.swing.JOptionPane;
 
 public class Main extends JFrame {
 
-	private static final long serialVersionUID = 1L;
 	private ScoreBoard scoreBoard;
 	private GaminField gameField;
 	private Thread thread;
@@ -21,8 +20,17 @@ public class Main extends JFrame {
 
 	private boolean started = false;
 
-	
-	public Main() {
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+
+			@Override
+			public void run() {
+				GameInitPool.getMain().startGame();
+			}
+		});
+	}
+
+	public void startGame () {
 		initComponents();
 		initGame();
 		initFrame();
@@ -61,6 +69,10 @@ public class Main extends JFrame {
 	public void newGame() {
 		started = true;
 		thread.start();
+	}
+
+	public boolean getStarted() {
+		return started;
 	}
 
 	public void pauseGame(){
@@ -102,22 +114,6 @@ public class Main extends JFrame {
 			JOptionPane.showMessageDialog(getParent(), "Something went wrong :( /n Please relaunch app");
 			break;
 		}
-	}
-
-	/*
-	 * Java Swing is not thread safe we have to run the code within the event
-	 * dispatch thread. You can read this
-	 * "https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html">
-	 * 
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-
-			@Override
-			public void run() {
-				new Main();
-			}
-		});
 	}
 
 	private class KeyboardHandler extends KeyAdapter {

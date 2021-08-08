@@ -14,7 +14,6 @@ import javax.swing.JPanel;
 
 public class GaminField extends JPanel {
 
-	private static final long serialVersionUID = 1L;
 	public static final int PANEL_WIDTH = 700;
 	public static final int PANEL_HEIGHT = 400;
 
