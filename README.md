@@ -25,28 +25,33 @@ If not refer this link, download and install it.
 3) Now it start to download the repository from the git server.
 
 
-4) 100% download complete, open your favourite editor. If you are using Intellij Idea or Eclipse it will be easy import the libraries.
+4) 100% download complete, open your favourite editor. If you are using IDE, it identified the project is gradle project and configured it automatically. If you are using Intellij Idea or Eclipse it will be easy import the libraries to your gradle scripts.
 
 
-5) If you are using other code editor, please import the below libraries.
+5) If you are using other code editor, please import the below libraries to your gradle script and setup the gradle in your machine.
     * JUnit4
     * junit5
     * JUnit5.7.0
    
 
-6) go to **src** -> **com** -> **swlc** -> **bolton** -> **snakeoom**
+6) go to **app** -> **src** -> **com** -> **swlc** -> **bolton** -> **snakeoom**
 
+First you must setup the gradle in your IDE. ByDefault the IDEs gives message to load the gradle plugins. you can configure click on those baloons or IDE appearance settings.
 
 And find the for the file called `Main.java`. If you are using an IDE you can find
 a method called `public static void main ()` and you can see triangle button in number line section. press on it and you can run the app.
 
-if not you are using an IDE, you need to configure the Ant build tool. All those IDEs by default configured it. Visit Ant documentation here.
+if not you are using an IDE, you need to configure the gradle build tool. Visit to gradle official site and check the documentation there.
 
-https://ant.apache.org/manual/index.html
+https://docs.gradle.org/current/userguide/installation.html
 
-please follow this guide to run your app.
+After you setup the gradle, follow below command to run the app.
 
-https://howtodoinjava.com/ant/ant-build-jar-file-example/
+if you are using Linux or Unix, 
+`./gradlew run`
+
+if you are using Windows,
+`gradle run`
 
     
     
