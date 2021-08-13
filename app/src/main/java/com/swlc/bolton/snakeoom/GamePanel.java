@@ -1,5 +1,8 @@
 package com.swlc.bolton.snakeoom;
 
+import com.swlc.bolton.snakeoom.impl.Food;
+import com.swlc.bolton.snakeoom.impl.Snake;
+
 public class GamePanel implements Runnable {
 
 	public static final int DELAY = 200;

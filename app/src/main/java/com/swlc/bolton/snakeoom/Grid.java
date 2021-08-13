@@ -5,8 +5,6 @@ import java.awt.Insets;
 
 public class Grid extends GridBagConstraints {
 
-	private static final long serialVersionUID = 1L;
-
 	public Grid(int gridx, int gridy) {
 		this.gridx = gridx;
 		this.gridy = gridy;

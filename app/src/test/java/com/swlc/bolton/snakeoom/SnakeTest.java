@@ -1,5 +1,6 @@
 package com.swlc.bolton.snakeoom;
 
+import com.swlc.bolton.snakeoom.impl.*;
 import org.junit.jupiter.api.Test;
 
 import java.awt.geom.Ellipse2D;

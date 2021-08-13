@@ -1,5 +1,7 @@
 package com.swlc.bolton.snakeoom;
 
+import com.swlc.bolton.snakeoom.impl.Food;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;

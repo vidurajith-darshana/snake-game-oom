@@ -1,4 +1,6 @@
-package com.swlc.bolton.snakeoom;
+package com.swlc.bolton.snakeoom.impl;
+
+import com.swlc.bolton.snakeoom.FoodInterface;
 
 import java.awt.geom.Ellipse2D;
 
@@ -6,7 +8,7 @@ import java.awt.geom.Ellipse2D;
  * @author vidurajith.SAS9OCD
  *
  */
-public class Food {
+public class Food implements FoodInterface {
 
 	public static final int XSIZE = 20;
 	public static final int YSIZE = 20;
@@ -19,6 +21,7 @@ public class Food {
 		this.y = y;
 	}
 
+	@Override
 	public void next(Snake snake) {
 		for (Ellipse2D.Double e : snake.getParts()) {
 			while (x == e.getMinX() && y == e.getMinY()) {
@@ -28,7 +31,6 @@ public class Food {
 		}
 	}
 
-	
 	private double getNew() {
 		double d = 1111;
 		while (d >= 400 || d % 20 != 0) {
@@ -38,6 +40,7 @@ public class Food {
 		return d;
 	}
 
+	@Override
 	public Ellipse2D.Double getShape() {
 		return new Ellipse2D.Double(x, y, XSIZE, YSIZE);
 	}

@@ -1,4 +1,9 @@
-package com.swlc.bolton.snakeoom;
+package com.swlc.bolton.snakeoom.impl;
+
+import com.swlc.bolton.snakeoom.GaminField;
+import com.swlc.bolton.snakeoom.Route;
+import com.swlc.bolton.snakeoom.ScoreBoard;
+import com.swlc.bolton.snakeoom.SnakeInterface;
 
 import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
@@ -10,7 +15,7 @@ import java.util.List;
  * @author vidurajith.SAS9OCD
  *
  */
-public class Snake {
+public class Snake implements SnakeInterface {
 
 	public static final int XSIZE = 20;
 	public static final int YSIZE = 20;
@@ -32,10 +37,12 @@ public class Snake {
 	}
 
 
+	@Override
 	public void changeDirection(Route route) {
 		this.route = route;
 	}
 
+	@Override
 	public void move() {
 		switch (route) {
 		case UP:
@@ -84,10 +91,12 @@ public class Snake {
 		}
 	}
 
+	@Override
 	public List<Ellipse2D.Double> getParts() {
 		return snakeParts;
 	}
 
+	@Override
 	public void check() {
 		Ellipse2D.Double head = snakeParts.get(0);
 		Food food = gameField.getFood();
@@ -107,6 +116,7 @@ public class Snake {
 		}
 	}
 
+	@Override
 	public boolean isGameOver() {
 		return over;
 	}
