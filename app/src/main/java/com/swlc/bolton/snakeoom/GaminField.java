@@ -20,7 +20,7 @@ public class GaminField extends JPanel {
 	public static final int PANEL_HEIGHT = 400;
 
 	private List<Ellipse2D.Double> snakeParts;
-	private Food foods;
+	private FoodInterface foods = new Food(100, 100);;
 
 	public GaminField() {
 		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
@@ -29,7 +29,6 @@ public class GaminField extends JPanel {
 	}
 
 	public void initDefaults() {
-		foods = new Food(100, 100);
 		snakeParts = Collections.synchronizedList(new ArrayList<Ellipse2D.Double>());
 		snakeParts.add(new Ellipse2D.Double(260, 260, 20, 20));
 		snakeParts.add(new Ellipse2D.Double(260, 280, 20, 20));
@@ -46,7 +45,7 @@ public class GaminField extends JPanel {
 	}
 
 	public Food getFood() {
-		return foods;
+		return (Food)foods;
 	}
 
 	@Override

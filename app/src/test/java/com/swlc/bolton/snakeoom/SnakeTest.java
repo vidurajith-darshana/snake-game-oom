@@ -1,5 +1,6 @@
 package com.swlc.bolton.snakeoom;
 
+import com.swlc.bolton.snakeoom.exceptions.InvalidDirectionException;
 import com.swlc.bolton.snakeoom.impl.*;
 import org.junit.jupiter.api.Test;
 
@@ -28,7 +29,7 @@ class SnakeTest {
 			break;
 
 		default:
-			new Exception("Unexcepted Direction value!").printStackTrace();
+			new InvalidDirectionException("Unexcepted Direction value!").printStackTrace();
 			break;
 		}
 
@@ -50,7 +51,7 @@ class SnakeTest {
 			break;
 
 		default:
-			new Exception("Unexcepted Direction value!").printStackTrace();
+			new InvalidDirectionException("Unexcepted Direction value!").printStackTrace();
 			break;
 		}
 
@@ -72,7 +73,7 @@ class SnakeTest {
 			break;
 
 		default:
-			new Exception("Unexcepted Direction value!").printStackTrace();
+			new InvalidDirectionException("Unexcepted Direction value!").printStackTrace();
 			break;
 		}
 
@@ -94,7 +95,7 @@ class SnakeTest {
 			break;
 
 		default:
-			new Exception("Unexcepted Direction value!").printStackTrace();
+			new InvalidDirectionException("Unexcepted Direction value!").printStackTrace();
 			break;
 		}
 
